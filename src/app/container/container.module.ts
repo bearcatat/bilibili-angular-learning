@@ -5,8 +5,10 @@ import {HttpModule,JsonpModule} from '@angular/http';
 import {ContainerComponent} from './container.component';
 import {ContainerTopComponnet} from './top/container-top.component';
 import {TopRightComponent} from './top/right/top-right.component';
+import {RowComponent} from './row/row.component';
 
-import {InfoService} from '../b-service/info.service';
+import {InfoService} from  '../b-service/info.service';
+import {TagService} from '../b-service/tag.service';
 
 
 @NgModule({
@@ -19,8 +21,9 @@ import {InfoService} from '../b-service/info.service';
     ContainerComponent,
     ContainerTopComponnet,
     TopRightComponent,
+    RowComponent,
   ],
   exports:[ContainerComponent],
-  providers:[InfoService],
+  providers:[InfoService,TagService],
 })
 export class ContainerModule{}
