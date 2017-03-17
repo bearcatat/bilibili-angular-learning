@@ -7,6 +7,7 @@ import {NavComponent} from './ztop/nav/nav.component';
 import {TagComponent} from './tag/tag.component';
 
 import{NavService} from './nav.service';
+import{TagService} from '../b-service/tag.service';
 
 @NgModule({
     imports:[
@@ -19,6 +20,6 @@ import{NavService} from './nav.service';
         TagComponent,
     ],
     exports:[TopComponent],
-    providers:[NavService],
+    providers:[NavService,TagService,],
 })
 export class TopModule{}

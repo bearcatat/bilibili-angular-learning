@@ -1,6 +1,6 @@
 import{Component,OnInit} from '@angular/core';
 
-import{Tag,NavService} from '../nav.service';
+import{Tag,TagService} from '../../b-service/tag.service';
 
 @Component({
     moduleId:module.id,
@@ -10,9 +10,9 @@ import{Tag,NavService} from '../nav.service';
 
 export class TagComponent implements OnInit{
     tags:Tag[];
-    constructor(private navService:NavService){}
+    constructor(private tagService:TagService){}
     getTags():void{
-        this.navService.getTags().then(tags=>this.tags=tags);
+        this.tagService.getTags().then(tags=>this.tags=tags);
     }
     ngOnInit():void{
         this.getTags();
