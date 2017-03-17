@@ -39,6 +39,7 @@ const tags:Tag[]=[
 @Injectable()
 export class NavService{
     getNavs():Promise<Nav[]>{
+        console.log(navs);
         return Promise.resolve(navs);
     }
     getTags():Promise<Tag[]>{

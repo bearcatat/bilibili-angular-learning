@@ -1,13 +1,19 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {HttpModule,JsonpModule} from '@angular/http';
 
 import {ContainerComponent} from './container.component';
 import {ContainerTopComponnet} from './top/container-top.component';
 import {TopRightComponent} from './top/right/top-right.component';
 
+import {TopRightService} from './top/right/top-right.service'
+
+
 @NgModule({
   imports:[
     BrowserModule,
+    HttpModule,
+    JsonpModule,
   ],
   declarations:[
     ContainerComponent,
@@ -15,6 +21,6 @@ import {TopRightComponent} from './top/right/top-right.component';
     TopRightComponent,
   ],
   exports:[ContainerComponent],
-  providers:[],
+  providers:[TopRightService],
 })
 export class ContainerModule{}

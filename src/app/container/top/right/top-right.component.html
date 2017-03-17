@@ -1,4 +1,14 @@
-<div class="top-list-wrapper">
   <ul class="top-list clearfix">
+    <li *ngFor="let vItem of vItems">
+      <div class="v-item">
+        <a href="www.bilibili.com/video/av{{vItem.aid}}">
+          <div class="medal"></div>
+          <div class="original"></div>
+          <div class="preview"><img data-img="" src="{{vItem.pic}}" loaded="loaded" alt="{{vItem.title}}" style="width: 160px; opacity: 1;"></div>
+          <div class="mask"></div>
+          <div class="play-icon"></div>
+          <div class="info"><div class="t">{{vItem.title}}</div><p class="up">up主：{{vItem.author}}</p><p class="play">播放：{{vItem.play}}</p></div>
+        </a>
+      </div>
+    </li>
   </ul>
-</div>
