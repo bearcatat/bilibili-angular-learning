@@ -1,6 +1,6 @@
 <div class="b-page-body">
-  <div class="index-container">
+  <div class="index-container" id="index_container">
     <container-top></container-top>
-    <container-row *ngFor="let tag of tags" [tag]="tag"></container-row>
+    <container-row *ngFor="let tag of tags" [tag]="tag" [vlist]="index[tag.id.slice(2)]"></container-row>
   </div>
 </div>

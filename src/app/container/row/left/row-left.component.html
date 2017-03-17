@@ -1,1 +1,6 @@
-
+<row-left-head [tag]="tag"></row-left-head>
+<div class="b-body">
+  <ul class="vidbox v-list">
+    <v-box *ngFor="let vbox of vlist" [vbox]="vbox"></v-box>
+  </ul>
+</div>

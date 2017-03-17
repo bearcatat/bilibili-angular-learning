@@ -1,0 +1,30 @@
+<li>
+  <div class="v">
+    <a class="preview cover-preview" href="http://www.bilibili.com/video/av{{vbox.aid}}/" target="_blank">
+      <div class="medal"></div>
+      <div class="original"></div>
+      <div class="border"></div>
+      <img data-img="" src={{vbox.pic}} loaded="loaded" alt="{{vbox.title}}" style="opacity: 1;">
+      <div class="back">
+        <div></div>
+      </div>
+      <div class="fore">
+        <span></span>
+        <div class="bar">
+          <div></div>
+        </div>
+      </div>
+      <div class="x"><b class="x2">{{getTime(vbox.duration)}}</b></div>
+    </a>
+    <a href="http://www.bilibili.com/video/av{{vbox.aid}}/" target="_blank" title="{{vbox.title}}">
+      <div class="t">{{vbox.title}}</div>
+      <div class="i">
+        <span>
+          <i class="b-icon b-icon-v-play"></i> {{vbox.stat?getNumber(vbox.stat.view):getNumber(vbox.play)}}
+        </span><span>
+          <i class="b-icon b-icon-v-dm"></i>{{vbox.stat?getNumber(vbox.stat.danmaku):getNumber(vbox.video_review)}}
+        </span>
+      </div>
+    </a>
+  </div>
+</li>

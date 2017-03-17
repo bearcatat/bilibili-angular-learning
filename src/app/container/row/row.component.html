@@ -2,8 +2,24 @@
   <div class="b-section-head"></div>
   <div class="b-section-body">
     <div class="b-l">
+      <row-left [tag]="tag" [vlist]="vlist"></row-left>
     </div>
     <div class="b-r">
+      <div class="b-head">
+        <div class="left">
+          <span class="b-head-t"><h3>排行</h3></span>
+        </div>
+        <div class="right">
+          <div on-mouseenter="ison=true" on-mouseleave="ison=false" on-init="ison=false"  class="b-slt" [class.on]="ison">
+            <span class="txt">三日</span>
+            <div class="b-slt-arrow"></div>
+            <ul class="list" on-mouseenter="display=true" on-mouseleave="display=false" on-init="display=false" [style.display]="display?bloch:none" style="left: -1px; right: auto;">
+              <li selected="selected" class="b-state-selected" data-value="3" data-source="/index/catalogy/13-3day.json">三日</li>
+              <li data-value="7" data-source="/index/catalogy/13-week.json">一周</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

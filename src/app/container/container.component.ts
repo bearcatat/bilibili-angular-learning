@@ -1,6 +1,7 @@
 import {Component,OnInit} from '@angular/core';
 
 import {TagService,Tag} from '../b-service/tag.service';
+import {InfoService,Index} from '../b-service/info.service';
 
 @Component({
   moduleId:module.id,
@@ -8,12 +9,15 @@ import {TagService,Tag} from '../b-service/tag.service';
   templateUrl:'./container.component.html',
 })
 export class ContainerComponent implements OnInit{
-  constructor(private tagservice:TagService){}
+  constructor(private tagservice:TagService,private infoService:InfoService){}
   tags:Tag[];
-  private getTagDetails():void{
-    this.tagservice.getTagDetails().then(tags=>this.tags=tags);
-  }
+  index:Index;
   ngOnInit():void{
-    this.getTagDetails();
+    this.tagservice.getTagDetails().then(tags=>{
+      this.infoService.getIndex().then(index=>{
+        this.tags=tags
+        this.index=index
+      })
+    })
   }
 }
