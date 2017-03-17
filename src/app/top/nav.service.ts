@@ -18,7 +18,6 @@ const navs:Nav[]=[
 @Injectable()
 export class NavService{
     getNavs():Promise<Nav[]>{
-        console.log(navs);
         return Promise.resolve(navs);
     }
 }

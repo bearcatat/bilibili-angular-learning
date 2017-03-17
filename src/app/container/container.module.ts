@@ -6,7 +6,7 @@ import {ContainerComponent} from './container.component';
 import {ContainerTopComponnet} from './top/container-top.component';
 import {TopRightComponent} from './top/right/top-right.component';
 
-import {TopRightService} from './top/right/top-right.service'
+import {InfoService} from '../b-service/info.service';
 
 
 @NgModule({
@@ -21,6 +21,6 @@ import {TopRightService} from './top/right/top-right.service'
     TopRightComponent,
   ],
   exports:[ContainerComponent],
-  providers:[TopRightService],
+  providers:[InfoService],
 })
 export class ContainerModule{}

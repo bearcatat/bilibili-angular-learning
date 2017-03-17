@@ -1,6 +1,6 @@
 import {Component,OnInit} from '@angular/core';
 
-import {TopRightService,VItem} from './top-right.service';
+import {InfoService,VItem} from '../../../b-service/info.service';
 
 @Component({
   moduleId:module.id,
@@ -9,10 +9,10 @@ import {TopRightService,VItem} from './top-right.service';
 })
 
 export class TopRightComponent implements OnInit{
-  constructor(private topRightService:TopRightService){}
+  constructor(private infoService:InfoService){}
   vItems:VItem[];
   getRanking3Day():void{
-    this.topRightService.getRanking3Day()
+    this.infoService.getRanking3Day()
     .then(vItems=>this.vItems=vItems);
   }
   ngOnInit():void{
