@@ -1,7 +1,7 @@
-#Environment
+# Environment
 Node.js+TypeScript
-#Install
+# Install
 cd bilibili-angular-learning && npm install
-#Run
+# Run
 npm start
 
