@@ -1,5 +1,5 @@
 # bilibili-angular-learning
-rebuild bilibili by angularjs2
+  rebuild bilibili by angularjs2
 ----
 # Environment
 Node.js+TypeScript
